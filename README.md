@@ -1,7 +1,8 @@
 # JavaScript-outline
 An overview of javascript
 
-[Online](https://Marco-hui.github.io/JavaScript-outline)
+- [Online](https://Marco-hui.github.io/JavaScript-outline)
+- [中文站点](https://Marco-hui.gitee.io/JavaScript-outline)
 
 ## Development
 

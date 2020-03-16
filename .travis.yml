@@ -1,9 +1,22 @@
-sudo: required
 language: node_js
-node_js: stable
-script: bash ./deploy.sh
+node_js:
+  - "8"
+
+install:
+  - npm install
+
+script:
+  - npm run build
+
+after_success:
+  - cd docs/.vuepress/dist
+  - git init
+  - git config --global user.name "${U_NAME}"
+  - git config --global user.email "${U_EMAIL}"
+  - git add .
+  - git commit -m "Automatically update from travis-ci"
+  - git push --quiet --force  "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+
 branches:
   only:
-  - master
-notifications:
-  email: false
+    - master
