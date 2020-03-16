@@ -1,0 +1,35 @@
+{
+  "name": "JavaScript-outline",
+  "version": "1.0.0",
+  "description": "An overview of javascript",
+  "author": "Marco-hui",
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "precommit": "lint-staged",
+    "lint": "prettier --write 'docs/**/*.md'"
+  },
+  "lint-staged": {
+    "*.{js,json,css,md,vue}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "axios": "0.18.1",
+    "webpack-dev-middleware": "^3.6.0"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-back-to-top": "^1.2.0",
+    "husky": "0.14.3",
+    "lint-staged": "7.2.2",
+    "prettier": "1.14.2",
+    "vuepress": "0.14.9"
+  }
+}
